@@ -22,6 +22,27 @@
 			type="font/woff2"
 			crossorigin="anonymous"
 		/>
+		<link
+			rel="preload"
+			href="/boxers/german.webp"
+			as="image"
+			type="image/webp"
+			fetchpriority="high"
+		/>
+		<link
+			rel="preload"
+			href="/boxers/coscu.webp"
+			as="image"
+			type="image/webp"
+			fetchpriority="high"
+		/>
+		<link
+			rel="preload"
+			href="/logo.webp"
+			as="image"
+			type="image/webp"
+			fetchpriority="high"
+		/>
 	</head>
 
 	<body class="relative">
@@ -33,6 +54,8 @@
 					class="w-32 lg:w-64 h-auto"
 					alt="Logo de la Velda"
 					src="/logo.webp"
+					width="385"
+					height="412"
 				/>
 				<h1
 					class="font-boxing text-3xl uppercase text-center text-white font-bold"
@@ -52,7 +75,7 @@
 				class={`flex justify-between relative
 					[&>div>img]:absolute [&>div>img]:bottom-0
 					[&>div>img]:w-auto
-					[&>div>img]:animate-duration-1000 [&>div>img]:animate-ease-in-out
+					[&>div>img]:animate-duration-700 [&>div>img]:animate-ease-in-out
 					h-[40vh] md:h-[65vh] lg:h-screen pt-4 lg:pt-24 border-b border-white/10
 				`}
 			>
@@ -80,66 +103,70 @@
 
 				<div class="relative w-full">
 					<img
-						class="left-0 h-full z-50 animate-fade-right"
+						class="left-0 h-full z-50"
 						src="/boxers/coscu.webp"
 						alt="Coscu"
+						fetchpriority="high"
 					/>
 					<img
-						class="left-[5%] h-[80%] z-40 animate-delay-300 animate-fade-right"
+						class="left-[5%] h-[80%] z-40 animate-fade-right"
 						src="/boxers/mayichi.webp"
 						alt="Mayichi"
 					/>
 					<img
-						class="left-[15%] h-[75%] z-30 animate-delay-500 animate-fade-right"
+						class="left-[15%] h-[75%] z-30 animate-delay-300 animate-fade-right"
 						src="/boxers/viruzz.webp"
 						alt="Viruzz"
 					/>
 					<img
-						class="left-[30%] h-[70%] z-20 animate-delay-700 animate-fade-right"
+						class="left-[30%] h-[70%] z-20 animate-delay-500 animate-fade-right"
 						src="/boxers/fernanfloo.webp"
 						alt="Fernanfloo"
 					/>
 					<img
-						class="left-[42%] h-[68%] z-10 animate-delay-1000 animate-fade-right"
+						class="left-[42%] h-[68%] z-10 animate-delay-700 animate-fade-right"
 						src="/boxers/la-rivers.webp"
 						alt="La Rivers"
 					/>
 					<img
-						class="left-[45%] h-[63%] z-0 animate-delay-[1300ms] animate-fade-right"
+						class="left-[45%] h-[63%] z-0 animate-delay-1000 animate-fade-right"
 						src="/boxers/papigavi.webp"
 						alt="Papigavi"
+						fetchpriority="low"
 					/>
 				</div>
 				<div class="relative w-full">
 					<img
-						class="right-0 h-full z-50 animate-fade-left"
+						class="right-0 h-full z-50"
 						src="/boxers/german.webp"
 						alt="German"
+						fetchpriority="high"
 					/>
 					<img
-						class="right-[5%] h-[80%] z-40 animate-fade-left animate-delay-300"
+						class="right-[5%] h-[80%] z-40 animate-fade-left"
 						src="/boxers/amouranth.webp"
 						alt="Amouranth"
 					/>
 					<img
-						class="right-[15%] h-[75%] z-30 animate-fade-left animate-delay-500"
+						class="right-[15%] h-[75%] z-30 animate-fade-left animate-delay-300"
 						src="/boxers/shelao.webp"
 						alt="Shelao"
 					/>
 					<img
-						class="right-[30%] h-[70%] z-20 animate-fade-left animate-delay-700"
+						class="right-[30%] h-[70%] z-20 animate-fade-left animate-delay-500"
 						src="/boxers/luzu.webp"
 						alt="Luzu"
 					/>
 					<img
-						class="right-[42%] h-[68%] z-10 animate-fade-left animate-delay-1000"
+						class="right-[42%] h-[68%] z-10 animate-fade-left animate-delay-700"
 						src="/boxers/rivers.webp"
 						alt="Rivers"
 					/>
 					<img
-						class="right-[45%] h-[63%] z-0 animate-fade-left animate-delay-[1300ms]"
+						class="right-[45%] h-[63%] z-0 animate-fade-left animate-delay-1000"
 						src="/boxers/ampeter.webp"
 						alt="Ampeter"
+						fetchpriority="low"
 					/>
 				</div>
 			</section>
@@ -210,12 +237,24 @@
 		font-family: "Boxing";
 		src: url("/fonts/boxing.woff2") format("woff2");
 		font-weight: bold;
+		font-display: swap;
 	}
 
 	@font-face {
 		font-family: "Boxing-Striped";
 		src: url("/fonts/boxing-striped.woff2") format("woff2");
 		font-weight: bold;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Adjusted Arial Fallback';
+		src: local(Arial);
+		size-adjust: 70%;
+		ascent-override: 130%;
+		descent-override: 0%;
+		line-gap-override: 32%;
+		text-transform: uppercase;
 	}
 </style>
 
